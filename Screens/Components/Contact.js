@@ -80,6 +80,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     flexDirection: "row",
     alignItems: "center",
+    paddingHorizontal: 15,
   },
   stredIcon: {
     backgroundColor: "#3C4048",

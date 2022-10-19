@@ -26,12 +26,16 @@ const items = [
   },
 ];
 
-const MenuIcon = () => {
+const MenuIcon = ({ navigation }) => {
+  const handlePress = (items) => {
+    if (items.id === 1) navigation.navigate("Room");
+  };
   return (
     <View style={styles.container}>
       {items.map((items) => (
         <View style={styles.buttonContainer} key={items.id}>
           <TouchableOpacity
+            onPress={() => handlePress(items)}
             style={{
               ...styles.button,
               backgroundColor: items.color ? items.color : "#0470dc",
